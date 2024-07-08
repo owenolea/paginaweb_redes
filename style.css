@@ -1,7 +1,33 @@
-header{
-    color: blue;
+body{
+    background-color: beige;
 }
-.img{
-height: 5%;  
-width: 5%;
+header{
+   background-color: rgba(79, 79, 236, 0.658);
+}
+
+main{
+    display: flex;
+}
+p{
+    color: rgb(94, 94, 94);
+}
+.TigrenseMultimedia{
+    background-color: rgb(14, 15, 110);
+      color: #f84040e3;
+      display: flex;
+      justify-content: center;
+    
+    }
+
+    .final{
+        background-color: rgb(14, 15, 110);
+          color: #f84040e3;
+          display: flex;
+          justify-content: center;
+        
+        }
+    
+.Caso2{
+        
+    display: inline-block;
 }
