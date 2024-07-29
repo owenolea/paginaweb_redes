@@ -1,33 +1,50 @@
-body{
+body {
     background-color: beige;
-}
-header{
-   background-color: rgba(79, 79, 236, 0.658);
-}
-
-main{
+    font-family: Arial, sans-serif; /* Agrega una fuente por defecto */
+  }
+  
+  header {
+    background-color: rgba(79, 79, 236, 0.658);
+    padding: 20px; /* Agrega espacio interno */
+  }
+  
+  main {
     display: flex;
-}
-p{
-    color: rgb(94, 94, 94);
-}
-.TigrenseMultimedia{
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas líneas */
+    justify-content: space-between; /* Distribuye elementos horizontalmente */
+  }
+  
+  .TigrenseMultimedia, .final {
     background-color: rgb(14, 15, 110);
-      color: #f84040e3;
-      display: flex;
-      justify-content: center;
-    
-    }
+    color: #f84040e3;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .noticias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .caso {
+    flex: 1; /* Ocupa todo el espacio disponible */
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .caso img {
+    max-width: 100%; /* Ajusta el ancho de la imagen al contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+  }
+  
+  p {
+    color: rgb(94, 94, 94);
+    line-height: 1.5; /* Espacio entre líneas */
+  }
 
-    .final{
-        background-color: rgb(14, 15, 110);
-          color: #f84040e3;
-          display: flex;
-          justify-content: center;
-        
-        }
-    
-.Caso2{
-        
-    display: inline-block;
-}
+  img{
+    height: 750;
+  }
+  
