@@ -1,17 +1,17 @@
 body {
     background-color: beige;
-    font-family: Arial, sans-serif; /* Agrega una fuente por defecto */
+    font-family: Arial, sans-serif; 
   }
   
   header {
     background-color: rgba(79, 79, 236, 0.658);
-    padding: 20px; /* Agrega espacio interno */
+    padding: 20px; 
   }
   
   main {
     display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten a nuevas líneas */
-    justify-content: space-between; /* Distribuye elementos horizontalmente */
+    flex-wrap: wrap; 
+    justify-content: space-between; 
   }
   
   .TigrenseMultimedia, .final {
@@ -21,6 +21,10 @@ body {
     padding: 20px;
   }
   
+  #contenedorNoticias{
+    display: flex;
+    flex-wrap: wrap;
+  }
   .noticias {
     display: flex;
     flex-wrap: wrap;
@@ -28,23 +32,17 @@ body {
   }
   
   .caso {
-    flex: 1; /* Ocupa todo el espacio disponible */
+    flex: 1;
     border: 1px solid #ccc;
     padding: 20px;
     margin-bottom: 20px;
   }
   
   .caso img {
-    max-width: 100%; /* Ajusta el ancho de la imagen al contenedor */
-    height: auto; /* Mantiene las proporciones de la imagen */
+    height: 10rem;
   }
   
   p {
     color: rgb(94, 94, 94);
-    line-height: 1.5; /* Espacio entre líneas */
+    line-height: 1.5; 
   }
-
-  img{
-    height: 750;
-  }
-  
