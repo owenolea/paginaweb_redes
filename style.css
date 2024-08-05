@@ -47,7 +47,15 @@ body {
   }
   
   p {
-    color: rgb(94, 94, 94);
+    color: rgb(0, 0, 0);
     line-height: 1.5; 
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+  }
+  
+ .izquierda{
+  position: absolute;
+  top: 0;
+  margin: 2rem;
+  left: 0;
+  height: 4rem;
   }
