@@ -8,3 +8,14 @@ img{
     
 }
 
+video{
+  height: 15rem;
+  
+}
+
+.TituloTRefuerzo{
+    color: darkblue;
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
