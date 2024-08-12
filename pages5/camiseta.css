@@ -1,0 +1,23 @@
+body {
+    background-color: beige;
+    font-family: Arial, sans-serif; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+  
+
+  .clase_carrusel{
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5rem;
+}
+
+.titulo{
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
