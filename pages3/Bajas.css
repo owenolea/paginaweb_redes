@@ -4,5 +4,13 @@ body {
   }
   
 img{
-    height: 10rem;
+    height: 15rem;
+}
+.TituloBajas{
+  color:blue;
+  padding: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.TextoBajas{
+color: black;
 }

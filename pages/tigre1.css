@@ -4,7 +4,7 @@ body {
   }
   
 img{
-    height: 10rem;
+    height: 15rem;
     
 }
 
@@ -13,9 +13,11 @@ video{
   
 }
 
-.TituloTRefuerzo{
-    color: darkblue;
-    padding: 20px;
+.TituloRefuerzo{
+    color:blue;
+    padding: 60px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+.textoRefuerzo{
+  color: black;
+}

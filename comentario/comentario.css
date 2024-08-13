@@ -1,0 +1,11 @@
+body {
+    background-image: url(https://portal.ourclub.io/cat/template_custom/css/../../template_for_client/imgs/fondo_login.png);
+    background-color: var(--color-fondo-contenido-no-logueado) !important;
+    background-repeat: no-repeat !important;
+    background-position: center !important;
+    background-size: cover !important;
+}
+.form-label , .form-text{
+    color: aliceblue;
+}
+
