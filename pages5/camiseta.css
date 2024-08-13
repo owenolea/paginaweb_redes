@@ -7,7 +7,9 @@ body {
     align-items: center;
 }
   
-
+video{
+    height: 40rem;
+}
   .clase_carrusel{
     width: 5rem;
     display: flex;
