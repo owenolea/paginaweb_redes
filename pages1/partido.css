@@ -8,3 +8,9 @@ body {
 img{
   height: 25rem;
 }
+
+.ResumenPartido1{
+  border: 5px solid rgb(0, 89, 255);
+  border-radius: 13px;
+  
+}

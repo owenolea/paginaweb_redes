@@ -9,6 +9,8 @@ body {
   
 video{
     height: 40rem;
+    border: 5px solid rgb(0, 89, 255);
+    border-radius: 13px;
 }
   .clase_carrusel{
     width: 5rem;

@@ -58,8 +58,8 @@ body {
   height: 4rem;
   }
   .comen{
-    color: red;
-    border: 5px solid white;
+    color: rgb(255, 255, 255);
+    border: 5px solid rgb(255, 0, 0);
     border-radius: 13px;
     background-color: blue;
   }
