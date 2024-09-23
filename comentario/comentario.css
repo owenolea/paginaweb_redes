@@ -9,3 +9,40 @@ body {
     color: aliceblue;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.question {
+    background-color: #f0f0ff;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+.options {
+    margin-top: 10px;
+}
+input[type="text"] {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+}
+.submit-btn {
+    background-color: #8a2be2;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.reset-btn {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}

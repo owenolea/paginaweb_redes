@@ -1,27 +1,146 @@
+<?php
+$mensaje = '';
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $bajas = isset($_POST["bajas"]) ? $_POST["bajas"] : "";
+    $refuerzos = isset($_POST["refuerzos"]) ? $_POST["refuerzos"] : "";
+    $refuerzo_traer = isset($_POST["refuerzo_traer"]) ? $_POST["refuerzo_traer"] : "";
+    $mejor_refuerzo = isset($_POST["mejor_refuerzo"]) ? $_POST["mejor_refuerzo"] : "";
+    $partido_riestra = isset($_POST["partido_riestra"]) ? $_POST["partido_riestra"] : "";
+    $dificultad_partido = isset($_POST["dificultad_partido"]) ? $_POST["dificultad_partido"] : "";
+    $goleada_union = isset($_POST["goleada_union"]) ? $_POST["goleada_union"] : "";
+    $mejor_gol = isset($_POST["mejor_gol"]) ? $_POST["mejor_gol"] : "";
+    $camiseta_alternativa = isset($_POST["camiseta_alternativa"]) ? $_POST["camiseta_alternativa"] : "";
+
+    $mensaje = "<h2>Respuestas recibidas:</h2>";
+    $mensaje .= "<p>Opinión sobre las bajas de Tigre: " . htmlspecialchars($bajas) . "</p>";
+    $mensaje .= "<p>Opinión sobre los refuerzos de Tigre: " . htmlspecialchars($refuerzos) . "</p>";
+    if ($refuerzos == "Otros") {
+        $mensaje .= "<p>Refuerzo que hubiera traído: " . htmlspecialchars($refuerzo_traer) . "</p>";
+    }
+    $mensaje .= "<p>Refuerzo que más gustó hasta ahora: " . htmlspecialchars($mejor_refuerzo) . "</p>";
+    $mensaje .= "<p>Opinión sobre el partido Tigre vs Riestra: " . htmlspecialchars($partido_riestra) . "</p>";
+    if ($partido_riestra == "Otra") {
+        $mensaje .= "<p>Lo que le costó a Tigre en el partido: " . htmlspecialchars($dificultad_partido) . "</p>";
+    }
+    $mensaje .= "<p>Opinión sobre la goleada de Tigre a Unión: " . htmlspecialchars($goleada_union) . "</p>";
+    if ($goleada_union == "Otros") {
+        $mensaje .= "<p>Gol que más gustó: " . htmlspecialchars($mejor_gol) . "</p>";
+    }
+    $mensaje .= "<p>Opinión sobre la camiseta alternativa: " . htmlspecialchars($camiseta_alternativa) . "</p>";
+}
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="comentario.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <title>Comentario</title>
+    <title>Opiniones sobre Tigre</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question {
+            background-color: #f0f0ff;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .options {
+            margin-top: 10px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .submit-btn {
+            background-color: #8a2be2;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <form>
-    <div class="mb-3">
-      <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
-    </div>
-    <div class="mb-3">
-      <label for="exampleInputPassword1" class="form-label">Comentarios</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+    <h1>Opiniones</h1>
+    <?php
+    if (!empty($mensaje)) {
+        echo $mensaje;
+        echo '<a href="' . $_SERVER['PHP_SELF'] . '">Volver al formulario</a>';
+    } else {
+    ?>
+    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+        <div class="question">
+            <h3>¿Cómo te cayó las Bajas de Tigre?</h3>
+            <div class="options">
+                <label><input type="radio" name="bajas" value="Bien" required> Bien</label><br>
+                <label><input type="radio" name="bajas" value="Mal"> Mal</label><br>
+                <label><input type="radio" name="bajas" value="jugador"> Que Jugador te hubiese gustado que se quede?: 
+                    <input type="text" name="bajas_jugador">
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>¿Qué te parecen los Refuerzos de Tigre?</h3>
+            <div class="options">
+                <label><input type="radio" name="refuerzos" value="Muy buenos" required> Muy buenos</label><br>
+                <label><input type="radio" name="refuerzos" value="Buenos"> Buenos</label><br>
+                <label><input type="radio" name="refuerzos" value="Malos"> Malos</label><br>
+                
+                <label>¿Qué refuerzo hubieras traído?
+                    <input type="text" name="refuerzo_traer">
+                </label><br>
+                <label>¿Cuál es tu refuerzo que más te gustó hasta ahora?
+                    <input type="text" name="mejor_refuerzo">
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>¿Qué te pareció la goleada de Tigre a Unión?</h3>
+            <div class="options">
+                <label><input type="radio" name="goleada_union" value="Jugaron excelente" required> Jugaron excelente</label><br>
+                <label><input type="radio" name="goleada_union" value="Bueno"> Bueno</label><br>
+                <label><input type="radio" name="goleada_union" value="Malo"> Malo</label><br>
+                
+                <label>¿Cuál fue el gol que más te gustó?
+                    <input type="text" name="mejor_gol">
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>¿Te gustó el partido de Tigre vs Riestra?</h3>
+            <div class="options">
+                <label><input type="radio" name="partido_riestra" value="Sí" required> Sí</label><br>
+                <label><input type="radio" name="partido_riestra" value="No"> No</label><br>
+                
+                <label>¿Qué crees que le costó en el partido a Tigre?
+                    <input type="text" name="dificultad_partido">
+                </label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>¿Qué te pareció la Camiseta Alternativa?</h3>
+            <div class="options">
+                <label><input type="radio" name="camiseta_alternativa" value="Me encantó" required> Me encantó</label><br>
+                <label><input type="radio" name="camiseta_alternativa" value="Buena"> Buena</label><br>
+                <label><input type="radio" name="camiseta_alternativa" value="Mala"> Mala</label>
+            </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Enviar</button>
+    </form>
+    <?php
+    }
+    ?>
 </body>
 </html>
